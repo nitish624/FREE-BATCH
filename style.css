@@ -1,0 +1,22 @@
+*{
+  padding: 0;
+  margin :2;
+  border:border-box;
+  font-family:arial;
+}
+
+body {
+    font-size: 15pt;
+    background-color:#F4F1DE ;
+}
+h1 {
+   color: red; 
+    align:centre ;
+}
+
+
+.navbar{
+  height:200px; 
+  background-color: green;
+  color: blue;
+}
