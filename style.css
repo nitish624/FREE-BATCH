@@ -51,10 +51,69 @@ body {
   border:none;
   -webkit-text-fill-color: blue;
   text-align: centre;
-  padding-left:12px;
+  padding-left:12px;#888B90
   font-size: 15px;
 }
 
-.container{
-  height:200px;
-}
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 10px 20px 10px 20px;
+      background: #ABA0A0;
+      margin:11px;
+      border-radius: 7px;
+    }
+
+    /* Playlist */
+    .playlist {
+      flex: 1 1 250px;
+      max-width: 300px;
+      background: #E1DECE;
+      border-radius: 7px;
+      padding: 3px;
+      overflow-y: auto;
+      max-height: 405px;
+      display: block; 
+      box-shadow: #D33030;
+      
+      /*
+      ✅ हमेशा दिखेगा */
+    }
+
+     h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: white;
+      background:#B99C9C;
+      text-align: center;
+    }
+
+    .playlist-item {
+      padding: 13px;
+      margin-bottom: 1px;
+      background: #2D80BE;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14px;
+      height: 20px;
+    }
+
+    .playlist-item:hover {
+      background: #35610F;
+    }
+
+    .playlist-item.active {
+      background: blue;
+      color: #fff;
+      
+    }
+    
+    .link{
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      -webkit-text-fill-color: #DAD941;
+    }
