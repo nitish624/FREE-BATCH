@@ -4,102 +4,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>My World</title>
-  <link rel="stylesheet" href="d.css">
+  <style>
+    *{
+  padding: 0;
+  margin :0;
+  border:border-box;
+  font-family:arial;
+}
+
+body {
+    font-size: 14pt;
+    background-color:#F4F1DE ;
+}
+
+/* Password Overlay Styles */
+    #password-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .password-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .password-box h3 {
+      margin-top: 0;
+      color: #333;
+      border-radius: 4px;
+    }
+    
+    #enter {
+      background: #ABA0A0;
+    }
+
+    .password-box input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .password-box button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .password-box button:hover {
+      background-color: #45a049;
+    }
+
+    #error-message {
+      display: none;
+      color: red;
+      margin-top: 10px;
+    }
+
+#MyWorld {
+  -webkit-text-fill-color: white;
+  background-color: red;
+  border-width: 2px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: centre;
+  height: 50px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+#all{
+  padding:0px;
+  margin: 0px;
+  background: whit;
+}
+
+
+#navbar{
+  height:25px; 
+  background-color:#0f1111 ;
+  color: blue;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+}
+
+.navbar:hover {
+   background-color: #ddd;
+}
+
+#othe{
+  background: transparent;
+  border:none;
+  -webkit-text-fill-color: blue;
+  text-align: center;
+  font-size: 18px;
+}
+
+#welcome {
+  background-color: #F4F1DE;
+  padding: 5px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-fill-color: red;
+  font-family:sans-serif;
+  }
+
+#website-container {
+   width: 100%;
+    height: 80vh; 
+  /* Adjust height as needed */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+
+#website-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+    }
+
+  </style>
   
 </head>
-
 
 <body>
     <div id="password-overlay">
     <div class="password-box">
-      <h3>🔑 Enter Password to Continue</h3>
+      <div id="enter"><h3>🔑 Enter Password to Continue</h3></div>
       <input type="password" id="password-input" placeholder="Enter password" />
       <button id="submit-button">Submit</button>
       <p id="error-message">Incorrect password. Please try again.</p>
     </div>
   </div>
   
-  <div id="heading">
-   <h1> <div id="MyWorld">🌎 My World</div>
-  </h1></div>
+  <h1><div id="MyWorld">🌎 My World</div></h1>
   
  
-  
-  <div id="navbar">
-    <div class="navbar">Home</div>
-    <div class="navbar">Batch</div>
-    <div class="navbar">Apply</div>
+ <div id="navbar">
+    <div class="navbar" data-url="https://www.google.com/search?q=batch">Home</div>
+    <div class="navbar" data-url="https://www.google.com/search?q=batch">Batch</div>
+    <div class="navbar" data-url="https://www.google.com/search?q=apply">Apply</div>
     <div class="navbar">
-    <select id="othe" >Other
-      <option>Other</option>
-      <option>app</option>
-      <option>Tools</option>
-      <option>Imp Web</option>
-      <option>Websites</option>
-      <option>Secret</option>
-      
-    </select>
-   
+      <select id="othe">
+        <option disabled selected>Other</option>
+        <option data-url="https://www.google.com/search?q=app">app</option>
+        <option data-url="https://www.google.com/search?q=tools">Tools</option>
+        <option data-url="https://www.google.com/search?q=important+web">Imp Web</option>
+        <option data-url="https://www.google.com/search?q=websites">Websites</option>
+        <option data-url="https://www.google.com/search?q=secret">Secret</option>
+      </select>
     </div>
   </div>
   
-  <pre id="welcome"><marquee>
-      Welcome to My World</marquee>
-    </pre>
+  <div id="welcome"><pre><marquee>
+      Welcome to My World</marquee></pre></div>
+  
+  <div id="website-container">
+    <iframe id="website-frame" src="https://www.google.com"></iframe>
+  </div>
   
   
-<!-- Playlist -->
-<div class="container"> <h3>📜 Playlist</h3>
-    <div class="playlist" id="playlist">
-    
-      <div class="playlist-item">
-        <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
-      </div>
-      <div class="playlist-item">
-        <a href="https://nitish624.github.io/BPSC_nkc/index.html" class="link">BPSC</a>
-      </div>
-      <div class="playlist-item">
-  <a href="https://chatgpt.com/" class="link">Chatgpt</a>
-</div>
-<div class="playlist-item">
-  <a href="https://github.com/" class="link">GitHub</a>
-</div>
-<div class="playlist-item">
-  <a href="https://github.com/modded-ubuntu/modded-ubuntu" class="link">UBUNTU</a>
-</div>
-<div class="playlist-item">
-  <a href="https://www.kali.org/docs/nethunter/nethunter-rootless/" class="link">Kali Nethunter</a>
-</div>
-<div class="playlist-item">
-  <a href="https://appinventor.mit.edu/" class="link">MIT App Inventor</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/KGS-STUDY-POINT-/map/indian.html" class="link">Indian Map</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/KGS-STUDY-POINT-/map/world.html" class="link">World Map</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/KGS-STUDY-POINT-/index.html" class="link">UPSC 2025</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
-</div>
-<div class="playlist-item">
-  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
-</div>
-    </div>
-</div>
-
-<script >
-  const correctPassword = "1234";
+  
+   <script>
+   
+   const correctPassword = " 1234";
     // अपना पासवर्ड यहाँ डालें
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -124,5 +223,30 @@
         }
       });
     });
-</script>
+   
+    document.addEventListener("DOMContentLoaded", function() {
+      const websiteFrame = document.getElementById('website-frame');
+      const navbarOptions = document.querySelectorAll('.navbar');
+      const otherSelect = document.getElementById('othe');
+
+      // Add a click event listener to each navbar option
+      navbarOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          const url = this.dataset.url;
+          if (url) {
+            websiteFrame.src = url;
+          }
+        });
+      });
+
+      // Add a change event listener to the 'Other' select dropdown
+      otherSelect.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        const url = selectedOption.dataset.url;
+        if (url) {
+          websiteFrame.src = url;
+        }
+      });
+    });
+  </script>
 </body>

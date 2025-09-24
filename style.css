@@ -10,50 +10,6 @@ body {
     background-color:#F4F1DE ;
 }
 
-#heading {
-  -webkit-text-fill-color: white;
-  background-color: red;
-  border-width: 2px;
-  display:flex;
-  justify-content: space-evenly;
-  align-items: centre;
-  height: 50px;}
-  
-  #MyWorld{
-  padding-left:30px;
-  padding-right:30px;
-}
-
-#navbar{
-  height:25px; 
-  background-color:#0f1111 ;
-  color: blue;
-  display:flex;
-  align-items: centre;
-  justify-content: space-evenly;
-}
-
-.navbar{
-  height:25px; 
-  background-color: none;
-  color: #B6BC6A;
-  behavior: box;
-}
-
-#welcome{
-  -webkit-text-fill-color: red;
-  font-weight: bold;
-}
-
-#othe{
-  border-radius:18px;
-  background:#F4F1DE ;
-  border:none;
-  -webkit-text-fill-color: blue;
-  text-align: centre;
-  padding-left:12px;#888B90
-  font-size: 15px;
-}
 
 .container {
       display: flex;
@@ -77,10 +33,9 @@ body {
       max-height: 405px;
       display: block; 
       box-shadow: #D33030;
-      
-      /*
-      ✅ हमेशा दिखेगा */
     }
+      /*✅ हमेशा दिखेगा */
+    
 
      h3 {
       margin: 0 0 10px;
