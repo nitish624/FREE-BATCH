@@ -1,104 +1,128 @@
-<!doctype html>
-<html lang="hi">
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>प्रोtected Login — KGS STUDY POINT</title>
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#9aa4b2}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, Roboto, Arial, sans-serif;background:linear-gradient(135deg,#081226 0%, #05202a 100%);color:#e6eef2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-    .card{width:100%;max-width:420px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.06));padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04)}
-    h1{margin:0 0 10px;font-size:20px}
-    p.lead{margin:0 0 18px;color:var(--muted)}
-    label{display:block;font-size:13px;margin-bottom:8px;color:var(--muted)}
-    .input{width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;font-size:15px}
-    .row{display:flex;gap:8px;align-items:center}
-    .btn{display:inline-block;padding:10px 14px;border-radius:9px;border:none;background:var(--accent);color:#042026;font-weight:600;cursor:pointer}
-    .btn.secondary{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
-    .note{font-size:13px;color:var(--muted);margin-top:12px}
-    .error{color:#ffb4b4;background:rgba(255,180,180,0.06);padding:10px;border-radius:8px;margin-top:12px;border:1px solid rgba(255,180,180,0.08)}
-    .success{color:#c8ffe6;background:rgba(200,255,230,0.04);padding:10px;border-radius:8px;margin-top:12px;border:1px solid rgba(200,255,230,0.06)}
-    .small{font-size:12px;color:var(--muted)}
-    .footer{margin-top:16px;text-align:center}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My World</title>
+  <link rel="stylesheet" href="d.css">
+  
 </head>
+
+
 <body>
-  <div class="card" role="main">
-    <h1>Login</h1>
-    <form id="loginForm" autocomplete="off">
-      <label for="password">पासवर्ड</label>
-      <input id="password" class="input" type="password" placeholder="पासवर्ड डालें" required />
-
-      <div style="margin-top:12px;display:flex;gap:8px;">
-        <button type="submit" class="btn">Login</button>
-        <button type="button" id="showHint" class="btn secondary">Hint</button>
-      </div>
-
-      <div id="msg"></div>
-
-      <div class="footer small">KGS STUDY POINT — Simple client-side login demo</div>
-    </form>
+    <div id="password-overlay">
+    <div class="password-box">
+      <h3>🔑 Enter Password to Continue</h3>
+      <input type="password" id="password-input" placeholder="Enter password" />
+      <button id="submit-button">Submit</button>
+      <p id="error-message">Incorrect password. Please try again.</p>
+    </div>
   </div>
+  
+  <div id="heading">
+   <h1> <div id="MyWorld">🌎 My World</div>
+  </h1></div>
+  
+ 
+  
+  <div id="navbar">
+    <div class="navbar">Home</div>
+    <div class="navbar">Batch</div>
+    <div class="navbar">Apply</div>
+    <div class="navbar">
+    <select id="othe" >Other
+      <option>Other</option>
+      <option>app</option>
+      <option>Tools</option>
+      <option>Imp Web</option>
+      <option>Websites</option>
+      <option>Secret</option>
+      
+    </select>
+   
+    </div>
+  </div>
+  
+  <pre id="welcome"><marquee>
+      Welcome to My World</marquee>
+    </pre>
+  
+  
+<!-- Playlist -->
+<div class="container"> <h3>📜 Playlist</h3>
+    <div class="playlist" id="playlist">
+    
+      <div class="playlist-item">
+        <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
+      </div>
+      <div class="playlist-item">
+        <a href="https://nitish624.github.io/BPSC_nkc/index.html" class="link">BPSC</a>
+      </div>
+      <div class="playlist-item">
+  <a href="https://chatgpt.com/" class="link">Chatgpt</a>
+</div>
+<div class="playlist-item">
+  <a href="https://github.com/" class="link">GitHub</a>
+</div>
+<div class="playlist-item">
+  <a href="https://github.com/modded-ubuntu/modded-ubuntu" class="link">UBUNTU</a>
+</div>
+<div class="playlist-item">
+  <a href="https://www.kali.org/docs/nethunter/nethunter-rootless/" class="link">Kali Nethunter</a>
+</div>
+<div class="playlist-item">
+  <a href="https://appinventor.mit.edu/" class="link">MIT App Inventor</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/KGS-STUDY-POINT-/map/indian.html" class="link">Indian Map</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/KGS-STUDY-POINT-/map/world.html" class="link">World Map</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/KGS-STUDY-POINT-/index.html" class="link">UPSC 2025</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
+</div>
+<div class="playlist-item">
+  <a href="https://nitish624.github.io/UPSC/index.html" class="link">UPSC 2025</a>
+</div>
+    </div>
+</div>
 
-  <script>
-    // ------ यहाँ पासवर्ड सेट करें ------
-    // सुरक्षा नोट: यह उदाहरण केवल client-side (ब्राउज़र) में काम करता है।
-    // अगर यह प्रोडक्शन रीडायरेक्ट है तो सर्वर-साइड सत्यापन आवश्यक है।
-    const presetPassword = "kgs@123"; // <-- अपनी पसंद का पासवर्ड यहां बदलें
-    const redirectURL = "https://nitish624.github.io/FREE-BATCH/b.html";
-    // -----------------------------------
+<script >
+  const correctPassword = "1234";
+    // अपना पासवर्ड यहाँ डालें
 
-    const form = document.getElementById('loginForm');
-    const pwd = document.getElementById('password');
-    const msg = document.getElementById('msg');
-    const hintBtn = document.getElementById('showHint');
+    document.addEventListener("DOMContentLoaded", () => {
+      const passwordOverlay = document.getElementById("password-overlay");
+      const passwordInput = document.getElementById("password-input");
+      const submitButton = document.getElementById("submit-button");
+      const errorMessage = document.getElementById("error-message");
 
-    function showMessage(text, type){
-      msg.innerHTML = `<div class="${type=='ok'?'success':'error'}">${text}</div>`;
-    }
-
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      msg.innerHTML = '';
-      const val = pwd.value || '';
-      // लगातार गलत प्रयासों से रोकने के लिए सरल throttle
-      if(localStorage.getItem('blockedUntil')){
-        const until = Number(localStorage.getItem('blockedUntil'));
-        if(Date.now() < until){
-          const remain = Math.ceil((until - Date.now())/1000);
-          showMessage(`बहुत अधिक प्रयास। ${remain} सेकंड बाद पुनः प्रयास करें।`, 'err');
-          return;
+      submitButton.addEventListener("click", () => {
+        if (passwordInput.value === correctPassword) {
+          passwordOverlay.style.display = "none";
+          errorMessage.style.display = "none";
         } else {
-          localStorage.removeItem('blockedUntil');
-          localStorage.removeItem('failedCount');
+          errorMessage.style.display = "block";
+          passwordInput.value = ""; // Clear the input field
         }
-      }
+      });
 
-      if(val === presetPassword){
-        showMessage('पासवर्ड सही है — रीडायरेक्ट कर रहे हैं...', 'ok');
-        // redirect
-        setTimeout(()=>{
-          window.location.href = redirectURL;
-        },700);
-      } else {
-        let count = Number(localStorage.getItem('failedCount') || 0) + 1;
-        localStorage.setItem('failedCount', String(count));
-        if(count >= 5){
-          // 30 सेकंड ब्लॉक
-          localStorage.setItem('blockedUntil', String(Date.now() + 30*1000));
-          showMessage('बहुत सारे गलत प्रयास — 30 सेकंड के लिए ब्लॉक किया गया।', 'err');
-        } else {
-          showMessage(`गलत पासवर्ड (प्रयास ${count}) — दोबारा कोशिश करें।`, 'err');
+      passwordInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+          submitButton.click();
         }
-      }
+      });
     });
-
-    hintBtn.addEventListener('click', function(){
-      alert('Hint: पासवर्ड कोड में सेट किया गया है — आप इसे HTML फ़ाइल में बदल सकते हैं।');
-    });
-
-    // सुरक्षा: Enter दबाने पर भी फॉर्म submit होता है — वही व्यवहार
-  </script>
+</script>
 </body>
-</html>
