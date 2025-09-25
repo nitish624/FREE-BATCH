@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>My World</title>
+  <style>
+    *{
+  padding: 0;
+  margin :0;
+  border:border-box;
+  font-family:arial;
+}
+
+body {
+    font-size: 14pt;
+    background-color:#F4F1DE ;
+}
+
+/* Password Overlay Styles */
+    #password-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .password-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .password-box h3 {
+      margin-top: 0;
+      color: #333;
+      border-radius: 4px;
+    }
+    
+    #enter {
+      background: #ABA0A0;
+    }
+
+    .password-box input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .password-box button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .password-box button:hover {
+      background-color: #45a049;
+    }
+
+    #error-message {
+      display: none;
+      color: red;
+      margin-top: 10px;
+    }
+
+#MyWorld {
+  -webkit-text-fill-color: white;
+  background-color: red;
+  border-width: 2px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: centre;
+  height: 50px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+#all{
+  padding:0px;
+  margin: 0px;
+  background: whit;
+}
+
+
+#navbar{
+  height:25px; 
+  background-color:#0f1111 ;
+  color: white;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      color: white; /* Added for consistency on div elements */
+}
+
+.navbar:hover {
+   background-color: #ddd;
+   color: black;
+}
+
+#othe{
+  background: transparent;
+  border:none;
+  -webkit-text-fill-color: white;
+  color: white; /* Explicitly set color for select text */
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#welcome {
+  background-color: #F4F1DE;
+  padding: 5px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-fill-color: red;
+  font-family:sans-serif;
+  }
+
+#website-container {
+   width: 100%;
+    height: 80vh; 
+  /* Adjust height as needed */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+
+#website-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+    }
+
+  </style>
+  
+</head>
+
+<body>
+    <div id="password-overlay">
+    <div class="password-box">
+      <div id="enter"><h3>🔑 Enter Password to Continue</h3></div>
+      <input type="password" id="password-input" placeholder="Enter password" />
+      <button id="submit-button">Submit</button>
+      <p id="error-message">Incorrect password. Please try again.</p>
+    </div>
+  </div>
+  
+  <h1><div id="MyWorld">🌎 My World</div></h1>
+  
+ 
+ <div id="navbar">
+   
+    <div class="navbar" data-url="https://nitish624.github.io/FREE-BATCH/navbar/home.html">Home</div>
+    
+    <div class="navbar" data-url="https://nitish624.github.io/FREE-BATCH/navbar/batch.html">Batch</div>
+    
+    <div class="navbar" data-url="https://nitish624.github.io/FREE-BATCH/navbar/apply.html">Apply</div>
+    
+    <div class="navbar">
+      <select id="othe">
+        
+        <option disabled selected>Other</option>
+          
+        <option data-url="https://nitish624.github.io/FREE-BATCH/navbar/other/app.html">Apps</option>
+          
+        <option data-url="https://nitish624.github.io/FREE-BATCH/navbar/other/tools.html">Tools</option>
+        
+        <option data-url="https://nitish624.github.io/FREE-BATCH/navbar/other/imp_web.html">Imp Web</option>
+        
+        <option data-url="https://nitish624.github.io/FREE-BATCH/navbar/other/webs.html">Websites</option>
+        
+        <option data-url="https://nitish624.github.io/FREE-BATCH/navbar/other/secret.html">Secret</option>
+        
+      </select>
+    </div>
+  </div>
+  
+  <div id="welcome"><pre><marquee>
+      Welcome to My World</marquee></pre></div>
+  
+  <div id="website-container">
+    <iframe id="website-frame" src="https://nitish624.github.io/FREE-BATCH/navbar/home.html"></iframe>
+  </div>
+  
+  
+  
+   <script>
+   
+   const correctPassword = " 1234";
+    // अपना पासवर्ड यहाँ डालें
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const passwordOverlay = document.getElementById("password-overlay");
+      const passwordInput = document.getElementById("password-input");
+      const submitButton = document.getElementById("submit-button");
+      const errorMessage = document.getElementById("error-message");
+
+      submitButton.addEventListener("click", () => {
+        // Trim any leading/trailing whitespace before comparison
+        if (passwordInput.value.trim() === correctPassword.trim()) {
+          passwordOverlay.style.display = "none";
+          errorMessage.style.display = "none";
+        } else {
+          errorMessage.style.display = "block";
+          passwordInput.value = ""; // Clear the input field
+        }
+      });
+
+      passwordInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+          submitButton.click();
+        }
+      });
+    });
+   
+    document.addEventListener("DOMContentLoaded", function() {
+      const websiteFrame = document.getElementById('website-frame');
+      const navbarOptions = document.querySelectorAll('.navbar'); // Select all navbar elements
+      const otherSelect = document.getElementById('othe');
+
+      // 1. Navbar options (Home, Batch, Apply) - Load in Iframe
+      navbarOptions.forEach(option => {
+        if (option.tagName === 'DIV' && option.dataset.url) {
+            option.addEventListener('click', function() {
+              const url = this.dataset.url;
+              if (url) {
+                websiteFrame.src = url;
+              }
+            });
+        }
+      });
+
+      // 2. Other Dropdown - Load in Iframe
+      otherSelect.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        const url = selectedOption.dataset.url; // Get URL from the 'data-url' attribute
+        
+        if (url) {
+          websiteFrame.src = url; // Load in iframe
+        }
+      });
+    });
+  </script>
+</body>
+</html>
